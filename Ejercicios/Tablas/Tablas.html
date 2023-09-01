@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+
+    <script>
+        function tabla() {
+            let num = numero.value;
+            let max = maximo.value;
+            ventana = window.open("", "", "");
+            ventana.document.write("<h1 aling=center> Tabla de multiplicar de " + num + "</h1>");
+            for (i = 1; i <= max; i++) {
+                
+                ventana.document.write(num + " x " + i + " = " + i * num );
+                for(j = 1; j < 2; j++){
+                    ventana.document.write("<br>");
+                }
+            }
+            
+        }
+
+    </script>
+</head>
+
+<body bgcolor="">
+    <div class="d-flex">
+        <div class="container">
+
+            <div>
+                <marquee bgcolor="beige"><h1>Tabla de multiplicar</h1></marquee>
+                <hr size="4px" color="black">
+            </div>
+            
+            <div class="card">
+                <div>
+                    <input type="text" id="numero" placeholder="Numero">
+                    <label> x </label>
+                    <input type="text" id="maximo" placeholder="Limite (Numero)">
+                    <input type="button" id="button" value="Generar" onclick="tabla()">
+        
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <script src="main.js"></script> -->
+    
+</body>
+
+</html>
